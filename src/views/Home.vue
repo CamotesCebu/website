@@ -19,6 +19,9 @@
           >Learn more</a
         >
       </p>
+      <button type="button" class="btn btn-primary" @click="show('asd')">
+        Primary
+      </button>
     </main>
 
     <Footer />
@@ -30,9 +33,24 @@ import { defineComponent } from "vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 
+import useToast from "@/hooks/useToast";
+
 export default defineComponent({
-  components: {},
-  setup() {},
+  components: {
+    Header,
+    Footer,
+  },
+  setup() {
+    const toast = useToast();
+
+    const show = (text: string) => {
+      toast.showHideToast(text);
+    };
+
+    return {
+      show,
+    };
+  },
 });
 </script>
 
