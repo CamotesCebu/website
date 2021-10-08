@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Maven Pro';
+  background-color: #fff;
+}
+
+/*
+ * Base structure
+ */
+ html,
+ body {
+   height: 100%;
+ }
+ 
+ .cover-container {
+   max-width: 42em;
+ }

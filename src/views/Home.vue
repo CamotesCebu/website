@@ -1,18 +1,39 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div
+    id="home"
+    class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
+  >
+    <Header />
+
+    <main class="px-3">
+      <h1>Cover your page.</h1>
+      <p class="lead">
+        Cover is a one-page template for building simple and beautiful home
+        pages. Download, edit the text, and add your own fullscreen background
+        photo to make it your own.
+      </p>
+      <p class="lead">
+        <a
+          href="#"
+          class="btn btn-lg btn-secondary fw-bold border-white bg-white"
+          >Learn more</a
+        >
+      </p>
+    </main>
+
+    <Footer />
   </div>
 </template>
-
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { defineComponent } from "vue";
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
+export default defineComponent({
+  components: {},
+  setup() {},
+});
 </script>
+
+<style lang="scss"></style>
